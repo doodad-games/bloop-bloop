@@ -1,5 +1,7 @@
 class_name G
 
+const PATH_BUILD_STEP := 16
+
 const SHOT_SPEED := 1000
 
 const QUEUE_NUM_BALLS := 3

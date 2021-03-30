@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="BallPathStart" type="Polygon2D"]
+color = Color( 0.156863, 0.156863, 0.156863, 1 )
+polygon = PoolVector2Array( 8, -32, -16, -40, -16, 40, 8, 32 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.156863, 0.156863, 0.156863, 0.74902 )
+polygon = PoolVector2Array( -16, -40, -40, -48, -40, 48, -16, 40 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color( 0.156863, 0.156863, 0.156863, 0.498039 )
+polygon = PoolVector2Array( -40, -48, -64, -56, -64, 56, -40, 48 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+color = Color( 0.156863, 0.156863, 0.156863, 0.25098 )
+polygon = PoolVector2Array( -64, -56, -88, -64, -88, 64, -64, 56 )

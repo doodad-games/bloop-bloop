@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://BallPath/BallPath.gd" type="Script" id=1]
+[ext_resource path="res://BallPath/BallPathSegment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BallPath/BallPathStart.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BallPath/BallPathEnd.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -0.594603, 128.434, 0.594603, -128.434, 0, 0, -127.988, -0.017286, 127.988, 0.017286, 192, -192, 0.891905, -128.137, -0.891905, 128.137, 384, 0, 127.245, 0.297302, -127.245, -0.297302, 0, 384, 0, 126.948, 0, -126.948, -384, 0, -128.137, 0.891905, 128.137, -0.891905, -192, -192 )
+}
+
+[node name="BallPath" type="Path2D"]
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+BallPathStart = ExtResource( 3 )
+BallPathSegment = ExtResource( 2 )
+BallPathEnd = ExtResource( 4 )

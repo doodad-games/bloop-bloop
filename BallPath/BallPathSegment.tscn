@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="BallPathSegment" type="Polygon2D"]
+z_index = -1
+color = Color( 0.156863, 0.156863, 0.156863, 1 )
+polygon = PoolVector2Array( -16, -32, 16, -32, 16, 32, -16, 32 )

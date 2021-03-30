@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Map.gd" type="Script" id=1]
 [ext_resource path="res://Shooter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ShotBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BallPath/BallPath.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -1.05946, 126.076, 1.05946, -126.076, 256, 320, -191.462, 0.297302, 191.462, -0.297302, 688, 64, -1.05946, -127.136, 1.05946, 127.136, 1120, 320, 189.114, 0, -189.114, 0, 688, 576, -1.05946, 60.9191, 1.05946, -60.9191, 480, 320, -127.665, -1.05946, 127.665, 1.05946, 688, 192, -0.529732, -61.9786, 0.529732, 61.9786, 864, 320 )
+}
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,3 +16,6 @@ ShotBall = ExtResource( 3 )
 
 [node name="Shooter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 688, 336 )
+
+[node name="BallPath" parent="." instance=ExtResource( 4 )]
+curve = SubResource( 1 )
