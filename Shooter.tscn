@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Shooter.gd" type="Script" id=1]
+[ext_resource path="res://QueuedBall.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 96 )
+}
+
+[node name="Shooter" type="Polygon2D"]
+z_index = -1
+color = Color( 0.313726, 0.235294, 0.313726, 1 )
+polygon = PoolVector2Array( -36, -12, -12, -36, 12, -36, 36, -12, 36, 12, 12, 36, -12, 36, -36, 12 )
+script = ExtResource( 1 )
+QueuedBall = ExtResource( 2 )
+
+[node name="Tunnel1" type="Polygon2D" parent="."]
+position = Vector2( 0, 11 )
+scale = Vector2( 1, 0.555556 )
+z_index = -1
+color = Color( 0.313726, 0.235294, 0.313726, 1 )
+polygon = PoolVector2Array( -16, 24, 16, 24, 16, 96, -16, 96 )
+
+[node name="Tunnel2" type="Polygon2D" parent="."]
+z_index = -1
+color = Color( 0.313726, 0.235294, 0.313726, 0.498039 )
+polygon = PoolVector2Array( -16, 64, 16, 64, 16, 80, -16, 80 )
+
+[node name="Tunnel3" type="Polygon2D" parent="."]
+z_index = -1
+color = Color( 0.313726, 0.235294, 0.313726, 0.247059 )
+polygon = PoolVector2Array( -16, 80, 16, 80, 16, 96, -16, 96 )
+
+[node name="QueuedBallPath" type="Path2D" parent="."]
+curve = SubResource( 1 )
