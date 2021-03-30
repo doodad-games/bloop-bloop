@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ShotBall.gd" type="Script" id=1]
+
+[node name="ShotBall" type="VisibilityNotifier2D"]
+rect = Rect2( -24, -24, 48, 48 )
+script = ExtResource( 1 )
