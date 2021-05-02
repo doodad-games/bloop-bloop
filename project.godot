@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://QueuedBall.gd"
 }, {
+"base": "PathFollow2D",
+"class": "RollingBall",
+"language": "GDScript",
+"path": "res://RollingBall.gd"
+}, {
 "base": "Polygon2D",
 "class": "Shooter",
 "language": "GDScript",
@@ -50,6 +55,7 @@ _global_script_class_icons={
 "G": "",
 "Map": "",
 "QueuedBall": "",
+"RollingBall": "",
 "Shooter": "",
 "ShotBall": ""
 }

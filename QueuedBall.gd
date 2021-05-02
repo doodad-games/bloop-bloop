@@ -4,7 +4,7 @@ class_name QueuedBall
 var pos_in_queue := 0
 var dest_offset := 0.0
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	update_position(delta)
 
 func init(initial_pos: int) -> void:

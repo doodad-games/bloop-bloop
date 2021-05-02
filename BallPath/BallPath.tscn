@@ -1,9 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://BallPath/BallPath.gd" type="Script" id=1]
-[ext_resource path="res://BallPath/BallPathSegment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://BallPath/BallPathStart.tscn" type="PackedScene" id=3]
-[ext_resource path="res://BallPath/BallPathEnd.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -13,6 +10,3 @@ _data = {
 [node name="BallPath" type="Path2D"]
 curve = SubResource( 1 )
 script = ExtResource( 1 )
-BallPathStart = ExtResource( 3 )
-BallPathSegment = ExtResource( 2 )
-BallPathEnd = ExtResource( 4 )

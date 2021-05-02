@@ -1,12 +1,12 @@
 extends Polygon2D
 class_name Shooter
 
-export (PackedScene) var QueuedBall
+signal shoot(pos, rot)
+
+const QUEUED_BALL_TSCN := preload("res://QueuedBall.tscn")
 
 var queue := []
 var advancing := false
-
-signal shoot(pos, rot)
 
 func _ready() -> void:
 	for i in range(G.QUEUE_NUM_BALLS):
@@ -35,7 +35,7 @@ func _input(event: InputEvent) -> void:
 	create_ball(G.QUEUE_NUM_BALLS - 1)
 	
 func create_ball(queue_pos: int) -> void:
-	var ball: QueuedBall = QueuedBall.instance()
+	var ball: QueuedBall = QUEUED_BALL_TSCN.instance()
 	$QueuedBallPath.add_child(ball)
 	ball.init(queue_pos)
 	queue.push_back(ball)

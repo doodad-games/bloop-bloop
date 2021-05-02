@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Map.gd" type="Script" id=1]
 [ext_resource path="res://Shooter.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ShotBall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://BallPath/BallPath.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve2D" id=1]
@@ -12,7 +11,6 @@ _data = {
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 1 )
-ShotBall = ExtResource( 3 )
 
 [node name="Shooter" parent="." instance=ExtResource( 2 )]
 position = Vector2( 688, 336 )
